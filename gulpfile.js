@@ -18,3 +18,8 @@ gulp.task('default', function () {
         .pipe(minifyHTML(minify_opts))
         .pipe(gulp.dest('.'));
 });
+
+gulp.task('watch', function () {
+    gulp.watch('templates/*.html', ['default']);
+    gulp.watch('pages/*.html', ['default']);
+});

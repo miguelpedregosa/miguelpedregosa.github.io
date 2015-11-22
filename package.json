@@ -18,6 +18,7 @@
   "homepage": "https://github.com/miguelpedregosa/miguelpedregosa.github.io#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-minify-html": "^1.0.4",
     "gulp-nunjucks-render": "^1.0.0"
   }
 }

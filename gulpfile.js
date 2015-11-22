@@ -4,10 +4,17 @@
 
 var gulp = require('gulp');
 var nunjucksRender = require('gulp-nunjucks-render');
+var minifyHTML = require('gulp-minify-html');
 
 gulp.task('default', function () {
+
+    var minify_opts = {
+        conditionals: true,
+        spare: true
+    };
     nunjucksRender.nunjucks.configure(['./'], {watch: false});
     return gulp.src('pages/*.html')
         .pipe(nunjucksRender())
+        .pipe(minifyHTML(minify_opts))
         .pipe(gulp.dest('.'));
 });
